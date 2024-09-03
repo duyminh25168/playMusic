@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color: #ec1f55;
+}
+
+.helo{
+  background-color: #ec1f55;
+  width: 100px;
+  height: 100px;
+}
+
+.container {
+  max-width: 512px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.play {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 512px;
+  position: fixed;
+  top: 0;
+  border-radius: 10px;
+}
+
+.dashboard {
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.title__desc {
+  color: var(--color);
+}
+
+.thumbnail__link {
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+@keyframes xoay {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  font-size: 24px;
+  align-items: center;
+}
+
+.btn__play {
+  background-color: #ec1f55;
+  padding: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+
+/* Tùy chỉnh thanh trượt chính */
+input[type="range"] {
+  -webkit-appearance: none; /* Xóa giao diện mặc định trên WebKit */
+  width: 100%; /* Chiều rộng của thanh trượt */
+  height: 8px; /* Chiều cao của thanh trượt */
+  background: #ddd; /* Màu nền của thanh trượt */
+  border-radius: 5px; /* Bo góc của thanh trượt */
+  outline: none; /* Bỏ đường viền */
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+/* Tùy chỉnh nút trượt (thumb) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 8px;
+  background: #ec1f55;
+  cursor: pointer;
+  border-radius: 5px; /* Bo góc của thanh trượt */
+}
+
+input[type="range"]::-moz-range-thumb,
+input[type="range"]::-ms-thumb {
+  width: 20px;
+  height: 8px;
+  background: #ec1f55;
+  cursor: pointer;
+  border-radius: 5px; /* Bo góc của thanh trượt */
+}
+
+.song {
+  padding: 20px;
+  margin-top: 385px;
+}
+
+.song__item {
+  list-style: none;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.song__item.active {
+  background-color: #ec1f55;
+  color: #ddd;
+}
+
+.song__img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.song__desc {
+  margin-left: 20px;
+  flex: 1;
+}
+
+.song__icon {
+  font-size: 24px;
+}

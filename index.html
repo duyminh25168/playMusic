@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>music</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="play">
+        <div class="dashboard">
+          <div class="title">
+            <p class="title__desc">now playing:</p>
+            <h2 class="title__name" id="title__name"></h2>
+          </div>
+          <div class="thumbnail" id="thumbnail">
+            <img src="" alt="" class="thumbnail__link" id="thumbnail__link" />
+          </div>
+          <div class="btn">
+            <div class="btn__redo" id="btn__redo">
+              <i class="fas fa-redo"></i>
+            </div>
+            <div class="btn__prev" id="btn__prev">
+              <i class="fas fa-step-backward"></i>
+            </div>
+            <div class="btn__play" id="btn__play">
+              <i class="fas fa-play icon-play"></i>
+            </div>
+            <div class="btn__next" id="btn__next">
+              <i class="fas fa-step-forward"></i>
+            </div>
+            <div class="btn__random" id="btn__random">
+              <i class="fas fa-random"></i>
+            </div>
+          </div>
+          <input
+            type="range"
+            class="range"
+            step="1"
+            min="0"
+            max="100"
+            value="0"
+          />
+          <audio controls id="audio" style="display: none">
+            <source src="" type="audio/mpeg" id="audio__soure" />
+          </audio>
+        </div>
+      </div>
+      <div class="song">
+        <ul class="song__list" id="song__list"></ul>
+      </div>
+    </div>
+    <script src="./assets/main.js"></script>
+  </body>
+</html>
